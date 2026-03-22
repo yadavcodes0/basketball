@@ -1,0 +1,22 @@
+# Ignore Flutter source and platform files to reduce Vercel upload size
+.dart_tool/
+.idea/
+.vscode/
+android/
+ios/
+linux/
+macos/
+windows/
+lib/
+test/
+
+# Crucial: DO NOT ignore assets/ globally, only ignore the root one if needed, 
+# but Flutter web actually moves assets inside build/web/assets.
+# We will explicitly ignore build subfolders EXCEPT web.
+build/app/
+build/windows/
+build/host/
+
+# But KEEP build/web and api/
+!build/web/
+!api/
